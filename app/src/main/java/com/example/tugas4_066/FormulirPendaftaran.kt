@@ -13,6 +13,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.OutlinedTextField
@@ -144,9 +146,18 @@ fun FormulirPendaftaran(modifier: Modifier){
                             .fillMaxWidth()
                             .padding(vertical = paddingSmall)
                     )
+                    Spacer(modifier = Modifier.height(paddingLarge))
 
-
-
+                    Button(
+                        onClick = { /* aksi submit */ },
+                        colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF8A2BE2)),
+                        shape = RoundedCornerShape(50),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(buttonHeight)
+                    ) {
+                        Text(stringResource(R.string.Submit), color = Color.White, fontWeight = FontWeight.Bold)
+                    }
 
 
                 }
