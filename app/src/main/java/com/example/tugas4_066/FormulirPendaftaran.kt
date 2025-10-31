@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -88,7 +89,15 @@ fun FormulirPendaftaran(modifier: Modifier){
                     .padding(paddingMedium)
                     .fillMaxWidth()
                 ){
-
+                    Text("NAMA LENGKAP", fontWeight = FontWeight.Bold)
+                    OutlinedTextField(
+                        value = nama,
+                        onValueChange = { nama = it },
+                        placeholder = { Text("Isian nama lengkap") },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = paddingSmall)
+                    )
                 }
 
             }
