@@ -57,7 +57,7 @@ fun FormulirPendaftaran(modifier: Modifier){
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(top = 53.dp),
+                .padding(top = 10.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Box(
